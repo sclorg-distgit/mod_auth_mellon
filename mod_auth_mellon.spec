@@ -28,7 +28,7 @@
 Summary: A SAML 2.0 authentication module for the Apache Httpd Server
 Name: %{?scl:%sub_prefix}mod_auth_mellon
 Version: 0.12.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: System Environment/Daemons
 Source0: https://github.com/UNINETT/mod_auth_mellon/releases/download/v%{version}/mod_auth_mellon-%{version}.tar.gz
 Source1: auth_mellon.conf
@@ -149,6 +149,9 @@ install -m 755 %{SOURCE4} %{buildroot}/%{_libexecdir}/mod_auth_mellon
 %endif
 
 %changelog
+* Thu Jun 16 2016 Jaroslaw Polok <jaroslaw.polok@cern.ch> 0.12.0-2
+- bump release for httpd24 collection update rebuild.
+
 * Wed Mar 09 2016 Jaroslaw Polok <jaroslaw.polok@cern.ch>  - 0.12.0-1
 - update to 0.12.0.
 - CVE-2016-2145 fix.
